@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v3
@@ -34,6 +34,9 @@ jobs:
 
     - name: Echo
       run: echo "HELLO WORLD!"
+
+    - name: File
+      run: cd ~/shahzod01/projects/deploy_runner && touch test.txt
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
